@@ -84,9 +84,7 @@ export default function Hero() {
   return (
     <section id="hero" ref={containerRef} className={styles.hero}>
       {/* Background grid */}
-      <div className={styles.grid} aria-hidden="true" />
-      <div className={styles.gradientBlob} aria-hidden="true" />
-      <div className={styles.gradientBlob2} aria-hidden="true" />
+      
 
       <div className={`${styles.inner} container`}>
         <div className={styles.left}>
@@ -225,24 +223,34 @@ export default function Hero() {
           </p>
 
           <p className={`${styles.tagline} hero-tagline`}>
-            {personal.tagline.split("").map((char, i) => (
-              <span
-                key={i}
-                className={styles.magnetLetter}
-                onMouseMove={(e) => {
-                  const rect = e.currentTarget.getBoundingClientRect();
-                  const cx = rect.left + rect.width / 2;
-                  const cy = rect.top + rect.height / 2;
-                  const dx = (e.clientX - cx) / rect.width;
-                  const dy = (e.clientY - cy) / rect.height;
-                  (e.currentTarget as HTMLElement).style.transform =
-                    `translate(${dx * -80}px, ${dy * -80}px)`;
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.transform = "translate(0, 0)";
-                }}
-              >
-                {char === " " ? "\u00A0" : char}
+            {personal.tagline.split(" ").map((word, wi, arr) => (
+              <span key={wi} style={{ display: "inline-block", whiteSpace: "nowrap" }}>
+                {word.split("").map((char, ci) => (
+                  <span
+                    key={ci}
+                    className={styles.magnetLetter}
+                    onMouseMove={(e) => {
+                      const rect = e.currentTarget.getBoundingClientRect();
+                      const cx = rect.left + rect.width / 2;
+                      const cy = rect.top + rect.height / 2;
+                      const dx = e.clientX - cx;
+                      const dy = e.clientY - cy;
+                      const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+                      const maxDist = 60;
+                      if (dist < maxDist) {
+                        const force = (maxDist - dist) / maxDist;
+                        (e.currentTarget as HTMLElement).style.transform =
+                          `translate(${(-dx / dist) * force * 150}px, ${(-dy / dist) * force * 150}px)`;
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.currentTarget as HTMLElement).style.transform = "translate(0, 0)";
+                    }}
+                  >
+                    {char}
+                  </span>
+                ))}
+                {wi < arr.length - 1 && "\u00A0"}
               </span>
             ))}
           </p>

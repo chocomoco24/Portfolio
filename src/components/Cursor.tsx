@@ -47,5 +47,6 @@ export default function Cursor() {
     };
   }, []);
 
+  if (window.matchMedia("(pointer: coarse)").matches) return null;
   return <div ref={cursorRef} className={styles.cursor} />;
 }
