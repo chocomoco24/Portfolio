@@ -110,8 +110,10 @@ export default function Contact({ active = false }: { active?: boolean }) {
               </a>
 
               <a
-                href={`mailto:${personal.email}`}
-                className={`${styles.socialCard}`}
+                href={personal.twitter}
+                target="_blank"
+                rel="noreferrer"
+                className={styles.socialCard}
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M22 5.924c-.793.352-1.647.588-2.538.694a4.47 4.47 0 001.959-2.47 8.936 8.936 0 01-2.83 1.082 4.458 4.458 0 00-7.59 4.061A12.646 12.646 0 013 4.81a4.458 4.458 0 001.38 5.94 4.42 4.42 0 01-2.02-.56v.06a4.458 4.458 0 003.57 4.37 4.485 4.485 0 01-2.012.077 4.459 4.459 0 004.16 3.09 8.938 8.938 0 01-5.535 1.91c-.36 0-.714-.02-1.063-.062a12.61 12.61 0 006.83 2.002c8.2 0 12.68-6.79 12.68-12.68 0-.193-.005-.386-.014-.577A9.053 9.053 0 0022 5.924z" />
