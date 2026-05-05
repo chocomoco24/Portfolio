@@ -10,7 +10,9 @@
 [![Three.js](https://img.shields.io/badge/Three.js-r184-black?style=flat&logo=three.js&logoColor=white)](https://threejs.org)
 [![GSAP](https://img.shields.io/badge/GSAP-3.12-88CE02?style=flat&logo=greensock&logoColor=white)](https://greensock.com/gsap)
 
-[Live Demo](https://github.com/chocomoco24) · [LinkedIn](https://www.linkedin.com/in/debarghya4/) · [Twitter / X](https://x.com/debarghyadatta4)
+<br>
+
+Live Demo : [https://debarghya.vercel.app/](https://debarghya.vercel.app/)
 
 </div>
 
@@ -108,6 +110,11 @@ The site is configured for zero-config deployment on [Vercel](https://vercel.com
 npm run build
 # Output is in /dist — deploy this folder to any static host
 ```
+
+## License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
 
 ---
 
