@@ -60,7 +60,7 @@ export const portfolioData = {
       ],
       tech: ["React", "Node.js", "Express", "MongoDB", "Python", "FastAPI"],
       github: "https://github.com/chocomoco24/Neural-Stroke-Care",
-      demo: null,
+      demo: "https://neural-stroke-care.vercel.app/",
     },
     {
       id: "f1-race-report",
@@ -75,9 +75,9 @@ export const portfolioData = {
         "PDF export with persistent Neon PostgreSQL report storage",
         "Deployed on Vercel + Render with scalable cloud architecture",
       ],
-      tech: ["React", "Spring Boot", "PostgreSQL", "Groq LLM", "Vercel", "Render"],
+      tech: ["React", "Node.js", "Express", "MySQL", "Groq LLM", "Vercel", "Render"],
       github: "https://github.com/chocomoco24/F1Race",
-      demo: null,
+      demo: "https://f1-race-report-omega.vercel.app/",
     }, 
   ],
 
