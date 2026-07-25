@@ -95,12 +95,12 @@ export const portfolioData = {
       title: "Nitro Mail",
       category: "Full-Stack",
       description:
-        "A full-stack Formula 1 analytics platform delivering live race data, standings visualisation, and historical race analysis from 1950–2026. Integrated AI-generated journalist-style race reports using Groq LLM APIs with automated report generation, caching, and PDF export.",
+        "Built a full-stack webmail client using Laravel 12, MySQL, and Tailwind CSS with SMTP, IMAP, Queues, and Scheduler integration. Implemented real-time email sync, scheduled/recurring emails, encrypted authentication, and read receipts. Developed a production-ready platform with CC/BCC, attachments, task reminders, and folder management.",
       highlights: [
-        "Interactive lap charts, podium tracking, and results tables",
-        "Groq LLM integration for AI journalist-style reports",
-        "PDF export with persistent Neon PostgreSQL report storage",
-        "Deployed on Vercel + Render with scalable cloud architecture",
+        "Built a full-stack webmail client using Laravel 12, MySQL, and Tailwind CSS",
+        "Implemented SMTP, IMAP, Laravel Queues, and Scheduler for email automation",
+        "Developed scheduled/recurring emails, reminders, and real-time inbox sync",
+        "Added CC/BCC, attachments, folder management, read receipts, and secure authentication",
       ],
       tech: ["PHP", "Laravel", "Blade", "MySQL"],
       github: "https://github.com/chocomoco24/NitroMail",
@@ -110,29 +110,17 @@ export const portfolioData = {
 
   experience: [
     {
-      company: "AICTE Virtual Internship",
-      role: "Python Full Stack Developer",
-      type: "Certificate",
-      period: "Oct 2024 – Dec 2024",
-      points: [
-        "Implemented Python, HTML, CSS, JavaScript, and SQL across real-world project tasks.",
-        "Applied user authentication, REST APIs, and database management concepts.",
-        "Strengthened coding practices through debugging and version control with Git/GitHub.",
-        "Solved industry-level assignments and coding challenges throughout the internship.",
-      ],
-    },
-    {
       company: "iLogitron Technologies Private Limited",
       role: "Software Development Engineer Intern",
       type: "Certificate",
-      period: "May 2026 – Present",
+      period: "May 2026 – July 2026",
       points: [
         "Implemented Python, HTML, CSS, JavaScript, and SQL across real-world project tasks.",
         "Applied user authentication, REST APIs, and database management concepts.",
         "Strengthened coding practices through debugging and version control with Git/GitHub.",
         "Solved industry-level assignments and coding challenges throughout the internship.",
       ],
-    },
+    }
   ],
 
   certifications: [
