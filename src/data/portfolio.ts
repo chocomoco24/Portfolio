@@ -10,7 +10,7 @@ export const portfolioData = {
     phone: "+91-9040179362",
     github: "https://github.com/chocomoco24",
     linkedin: "https://www.linkedin.com/in/debarghya4/",
-    twitter: "https://x.com/debarghyadatta4",
+    twitter: "https://x.com/_pyaaz_",
     instagram: "https://www.instagram.com/pyaaz._/",
     available: true,
   },
