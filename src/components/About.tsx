@@ -28,10 +28,10 @@ export default function About({ active = false }: { active?: boolean }) {
       );
       gsap.fromTo(
         ".about-extra",
-        { opacity: 0, x: 20 },
+        { opacity: 0, y: 20 },
         {
           opacity: 1,
-          x: 0,
+          y: 0,
           duration: 0.7,
           stagger: 0.1,
           ease: "power2.out",
@@ -55,37 +55,50 @@ export default function About({ active = false }: { active?: boolean }) {
           <div className="section-line" />
         </div>
 
-        <div className={styles.grid}>
+        {/* TOP ROW — text left, profile image right */}
+        <div className={styles.topGrid}>
           <div className={styles.left}>
             <p className={`${styles.intro} about-text`}>
-              I'm <strong>{personal.name}</strong>, a final-year Computer Science student at
+              I'm <strong>{personal.name}</strong>, a Computer Science graduate from
               KIIT University with a passion for building real, production-grade software.
             </p>
-            <p className={`${styles.body} about-text`}>{summary}</p>  
+            <p className={`${styles.body} about-text`}>{summary}</p>
           </div>
 
-          <div className={styles.right}>
-            <div className={`${styles.panel} about-extra`}>
-              <h3 className={styles.panelTitle}>Certifications</h3>
-              {certifications.map((c) => (
-                <div key={c.title} className={styles.certItem}>
-                  <span className={styles.certTitle}>{c.title}</span>
-                  <span className={styles.certIssuer}>{c.issuer}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className={`${styles.panel} about-extra`}>
-              <h3 className={styles.panelTitle}>Beyond Code</h3>
-              {extracurricular.map((e) => (
-                <div key={e.role} className={styles.extraItem}>
-                  <span className={styles.extraRole}>{e.role}</span>
-                  <span className={styles.extraOrg}>{e.org}</span>
-                </div>
-              ))}
+          <div className={`${styles.imageCol} about-text`}>
+            <div className={styles.imageWrapper}>
+              <img
+                src="/profile.png"
+                alt={personal.name}
+                className={styles.profileImage}
+              />
             </div>
           </div>
         </div>
+
+        {/* BOTTOM ROW — certifications and beyond code side by side, full width */}
+        <div className={styles.bottomPanels}>
+          <div className={`${styles.panel} about-extra`}>
+            <h3 className={styles.panelTitle}>Certifications</h3>
+            {certifications.map((c) => (
+              <div key={c.title} className={styles.certItem}>
+                <span className={styles.certTitle}>{c.title}</span>
+                <span className={styles.certIssuer}>{c.issuer}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className={`${styles.panel} about-extra`}>
+            <h3 className={styles.panelTitle}>Beyond Code</h3>
+            {extracurricular.map((e) => (
+              <div key={e.role} className={styles.extraItem}>
+                <span className={styles.extraRole}>{e.role}</span>
+                <span className={styles.extraOrg}>{e.org}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

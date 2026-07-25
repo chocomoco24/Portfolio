@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import styles from "./Navbar.module.css";
+import { portfolioData } from "../data/portfolio";
 
 
 export default function Navbar() {
@@ -21,6 +22,8 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const { resume } = portfolioData;
+  
   return (
     <header
       ref={navRef}
@@ -34,7 +37,7 @@ export default function Navbar() {
 
 
         <a
-          href="https://drive.google.com/file/d/1ZgRMh2SbvTeMjgj9xAVYLdBhZ_D2YLlQ/view?usp=sharing"
+          href={resume}
           className={styles.hirebtn}
         >
           resume
